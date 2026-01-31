@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="TazminatHesapla ile iletişime geçin - Sorularınız ve önerileriniz için bize ulaşın.">
+    <meta name="robots" content="index, follow">
+    <title>İletişim | TazminatHesapla</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="/" class="logo">
+                    <span class="logo-icon">💼</span>
+                    <span class="logo-text">Tazminat<span class="highlight">Hesapla</span></span>
+                </a>
+                <div class="nav-links">
+                    <a href="/#hesaplama">Hesaplama</a>
+                    <a href="/hakkimizda">Hakkımızda</a>
+                    <a href="/iletisim" class="active">İletişim</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Page -->
+    <main class="contact-page">
+        <div class="container">
+            <div class="contact-header">
+                <h1>İletişim</h1>
+                <p>Sorularınız, önerileriniz veya geri bildirimleriniz için bize ulaşın</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label class="form-label">
+                                <span class="label-icon">👤</span>
+                                Adınız Soyadınız
+                            </label>
+                            <input type="text" class="form-input" placeholder="Adınızı girin" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">
+                                <span class="label-icon">📧</span>
+                                E-posta Adresiniz
+                            </label>
+                            <input type="email" class="form-input" placeholder="ornek@email.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">
+                                <span class="label-icon">📝</span>
+                                Konu
+                            </label>
+                            <select class="form-select" required>
+                                <option value="">Konu seçin...</option>
+                                <option value="soru">Genel Soru</option>
+                                <option value="oneri">Öneri</option>
+                                <option value="hata">Hata Bildirimi</option>
+                                <option value="diger">Diğer</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">
+                                <span class="label-icon">💬</span>
+                                Mesajınız
+                            </label>
+                            <textarea class="form-textarea" rows="5" placeholder="Mesajınızı buraya yazın..."
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <span>📨</span>
+                            Mesaj Gönder
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">📧</div>
+                        <h3>E-posta</h3>
+                        <p>iletisim@tazminathesapla.com</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">⏰</div>
+                        <h3>Yanıt Süresi</h3>
+                        <p>Genellikle 24-48 saat içinde yanıt veriyoruz</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">❓</div>
+                        <h3>Sıkça Sorulan Sorular</h3>
+                        <p>Cevabınızı <a href="/#sss">SSS bölümümüzde</a> bulabilirsiniz</p>
+                    </div>
+
+                    <div class="contact-notice">
+                        <h4>⚠️ Önemli Not</h4>
+                        <p>Bu site hukuki danışmanlık vermemektedir. Tazminat haklarınız hakkında kesin bilgi için bir
+                            iş hukuku avukatına veya Çalışma ve Sosyal Güvenlik Bakanlığı'na başvurmanızı öneririz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <span class="logo-icon">💼</span>
+                        <span class="logo-text">Tazminat<span class="highlight">Hesapla</span></span>
+                    </a>
+                    <p>İş Kanunu'na uygun kıdem ve ihbar tazminatı hesaplama aracı.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Hızlı Erişim</h4>
+                    <a href="/#hesaplama">Tazminat Hesapla</a>
+                    <a href="/hakkimizda">Hakkımızda</a>
+                    <a href="/iletisim">İletişim</a>
+                </div>
+                <div class="footer-legal">
+                    <h4>Yasal</h4>
+                    <a href="/gizlilik">Gizlilik Politikası</a>
+                    <a href="/kullanim-sartlari">Kullanım Şartları</a>
+                    <a href="/cerez-politikasi">Çerez Politikası</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TazminatHesapla. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Mesajınız için teşekkürler! En kısa sürede size dönüş yapacağız.');
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>

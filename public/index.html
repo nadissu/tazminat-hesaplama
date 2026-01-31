@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Ücretsiz Kıdem ve İhbar Tazminatı Hesaplama Aracı. İş Kanunu'na göre kıdem tazminatı, ihbar tazminatı ve toplam haklarınızı anında hesaplayın.">
+    <meta name="keywords"
+        content="kıdem tazminatı hesaplama, ihbar tazminatı hesaplama, işçi hakları, tazminat hesaplama, iş kanunu, işten çıkarılma, istifa">
+    <meta name="author" content="Tazminat Hesaplama">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Kıdem ve İhbar Tazminatı Hesaplama | Ücretsiz Online Hesaplama Aracı">
+    <meta property="og:description"
+        content="İş Kanunu'na uygun kıdem ve ihbar tazminatınızı saniyeler içinde hesaplayın. Ücretsiz ve güvenilir hesaplama aracı.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="tr_TR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kıdem ve İhbar Tazminatı Hesaplama">
+    <meta name="twitter:description" content="Ücretsiz kıdem ve ihbar tazminatı hesaplama aracı">
+
+    <title>Kıdem ve İhbar Tazminatı Hesaplama | Ücretsiz Online Hesaplama Aracı 2026</title>
+
+    <link rel="canonical" href="https://yoursite.com/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Google AdSense -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="/" class="logo">
+                    <span class="logo-icon">💼</span>
+                    <span class="logo-text">Tazminat<span class="highlight">Hesapla</span></span>
+                </a>
+                <div class="nav-links">
+                    <a href="#hesaplama">Hesaplama</a>
+                    <a href="#nasil-hesaplanir">Nasıl Hesaplanır?</a>
+                    <a href="#sss">SSS</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">
+                <span class="badge-icon">✨</span>
+                2026 Güncel Tavan Tutarları ile Hesaplama
+            </div>
+            <h1 class="hero-title">
+                Kıdem ve İhbar Tazminatı<br>
+                <span class="gradient-text">Hesaplama Aracı</span>
+            </h1>
+            <p class="hero-description">
+                İş Kanunu'na uygun olarak kıdem ve ihbar tazminatınızı saniyeler içinde hesaplayın.
+                Ücretsiz, güvenilir ve güncel hesaplama aracımızla haklarınızı öğrenin.
+            </p>
+            <a href="#hesaplama" class="cta-button">
+                <span>Hemen Hesapla</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+            </a>
+        </div>
+        <div class="hero-bg"></div>
+    </section>
+
+    <!-- Ad Space 1 -->
+    <section class="ad-section">
+        <div class="container">
+            <div class="ad-placeholder" id="ad-top">
+                <!-- AdSense Ad Unit -->
+                <!-- <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                     data-ad-slot="XXXXXXXXXX"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> -->
+                <span class="ad-text">Reklam Alanı</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="calculator-section" id="hesaplama">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Tazminat Hesaplama</h2>
+                <p class="section-subtitle">Bilgilerinizi girerek kıdem ve ihbar tazminatınızı hesaplayın</p>
+            </div>
+
+            <div class="calculator-wrapper">
+                <div class="calculator-card">
+                    <form id="calculatorForm" class="calculator-form">
+                        <!-- Work Dates -->
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <span class="label-icon">📅</span>
+                                    İşe Giriş Tarihi
+                                </label>
+                                <input type="date" id="startDate" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <span class="label-icon">📅</span>
+                                    İşten Çıkış Tarihi
+                                </label>
+                                <input type="date" id="endDate" class="form-input" required>
+                            </div>
+                        </div>
+
+                        <!-- Salary -->
+                        <div class="form-group">
+                            <label class="form-label">
+                                <span class="label-icon">💰</span>
+                                Son Brüt Maaş (Aylık)
+                            </label>
+                            <div class="input-with-suffix">
+                                <input type="text" id="grossSalary" class="form-input" placeholder="25.000"
+                                    inputmode="numeric" required>
+                                <span class="input-suffix">₺</span>
+                            </div>
+                            <span class="form-hint">Brüt maaşınızı giriniz. Net maaşınızı bilmiyorsanız, bordronuzu
+                                kontrol edin.</span>
+                        </div>
+
+                        <!-- Additional Income -->
+                        <div class="form-group">
+                            <label class="form-label">
+                                <span class="label-icon">📊</span>
+                                Aylık Ek Gelirler (Yol, Yemek, Prim vb.)
+                            </label>
+                            <div class="input-with-suffix">
+                                <input type="text" id="additionalIncome" class="form-input" placeholder="0"
+                                    inputmode="numeric">
+                                <span class="input-suffix">₺</span>
+                            </div>
+                            <span class="form-hint">Düzenli olarak aldığınız ek gelirlerin aylık ortalaması</span>
+                        </div>
+
+                        <!-- Termination Reason -->
+                        <div class="form-group">
+                            <label class="form-label">
+                                <span class="label-icon">📋</span>
+                                İşten Ayrılma Nedeni
+                            </label>
+                            <select id="terminationReason" class="form-select" required>
+                                <option value="">Seçiniz...</option>
+                                <optgroup label="Kıdem Tazminatı Hak Edenler">
+                                    <option value="employer_termination">İşveren tarafından işten çıkarıldım (haksız
+                                        fesih)</option>
+                                    <option value="resignation_valid">Haklı nedenle istifa ettim (maaş ödenmemesi,
+                                        mobbing vb.)</option>
+                                    <option value="retirement">Emeklilik nedeniyle ayrıldım</option>
+                                    <option value="military">Askerlik nedeniyle ayrıldım</option>
+                                    <option value="marriage_female">Evlilik nedeniyle ayrıldım (kadın çalışan)</option>
+                                    <option value="health">Sağlık sorunları nedeniyle ayrıldım</option>
+                                    <option value="death">Vefat (mirasçılar adına)</option>
+                                </optgroup>
+                                <optgroup label="Kıdem Tazminatı Hak Etmeyenler">
+                                    <option value="resignation_voluntary">Kendi isteğimle istifa ettim</option>
+                                    <option value="employer_valid">İşveren haklı nedenle feshetti (ahlak kurallarına
+                                        aykırılık)</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <!-- Notice Given -->
+                        <div class="form-group" id="noticeGroup">
+                            <label class="form-label">
+                                <span class="label-icon">⏰</span>
+                                İhbar Süresi Kullandırıldı mı?
+                            </label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="noticeGiven" value="no" checked>
+                                    <span class="radio-custom"></span>
+                                    Hayır, kullandırılmadı
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="noticeGiven" value="yes">
+                                    <span class="radio-custom"></span>
+                                    Evet, kullandırıldı
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="calculate-btn">
+                            <span class="btn-icon">🧮</span>
+                            Tazminatı Hesapla
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Results Card -->
+                <div class="results-card" id="resultsCard" style="display: none;">
+                    <div class="results-header">
+                        <h3 class="results-title">
+                            <span class="results-icon">📊</span>
+                            Hesaplama Sonuçları
+                        </h3>
+                        <span class="results-date" id="calculationDate"></span>
+                    </div>
+
+                    <div class="results-grid">
+                        <!-- Work Duration -->
+                        <div class="result-item info">
+                            <div class="result-icon">⏱️</div>
+                            <div class="result-content">
+                                <span class="result-label">Toplam Çalışma Süresi</span>
+                                <span class="result-value" id="workDuration">-</span>
+                            </div>
+                        </div>
+
+                        <!-- Daily Wage -->
+                        <div class="result-item info">
+                            <div class="result-icon">💵</div>
+                            <div class="result-content">
+                                <span class="result-label">Günlük Brüt Ücret</span>
+                                <span class="result-value" id="dailyWage">-</span>
+                            </div>
+                        </div>
+
+                        <!-- Severance Pay -->
+                        <div class="result-item primary">
+                            <div class="result-icon">💰</div>
+                            <div class="result-content">
+                                <span class="result-label">Kıdem Tazminatı</span>
+                                <span class="result-value large" id="severancePay">-</span>
+                                <span class="result-note" id="severanceNote"></span>
+                            </div>
+                        </div>
+
+                        <!-- Notice Pay -->
+                        <div class="result-item secondary">
+                            <div class="result-icon">📋</div>
+                            <div class="result-content">
+                                <span class="result-label">İhbar Tazminatı</span>
+                                <span class="result-value large" id="noticePay">-</span>
+                                <span class="result-note" id="noticeNote"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Total -->
+                    <div class="total-section">
+                        <div class="total-label">Toplam Tazminat Tutarı</div>
+                        <div class="total-amount" id="totalAmount">0 ₺</div>
+                    </div>
+
+                    <!-- Disclaimer -->
+                    <div class="disclaimer">
+                        <span class="disclaimer-icon">⚠️</span>
+                        <p>Bu hesaplama bilgilendirme amaçlıdır ve yasal tavsiye niteliği taşımaz. Kesin sonuçlar için
+                            bir iş hukuku avukatına danışmanızı öneririz.</p>
+                    </div>
+
+                    <button class="print-btn" onclick="window.print()">
+                        <span>🖨️</span> Sonuçları Yazdır
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ad Space 2 -->
+    <section class="ad-section">
+        <div class="container">
+            <div class="ad-placeholder" id="ad-middle">
+                <!-- AdSense Ad Unit -->
+                <span class="ad-text">Reklam Alanı</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It's Calculated Section -->
+    <section class="info-section" id="nasil-hesaplanir">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Tazminat Nasıl Hesaplanır?</h2>
+                <p class="section-subtitle">İş Kanunu'na göre kıdem ve ihbar tazminatı hesaplama yöntemleri</p>
+            </div>
+
+            <div class="info-grid">
+                <!-- Kıdem Tazminatı -->
+                <article class="info-card">
+                    <div class="info-card-header">
+                        <span class="info-card-icon">💰</span>
+                        <h3 class="info-card-title">Kıdem Tazminatı</h3>
+                    </div>
+                    <div class="info-card-content">
+                        <p>Kıdem tazminatı, <strong>en az 1 yıl</strong> çalışan işçilere ödenen bir haktır.</p>
+
+                        <div class="formula-box">
+                            <span class="formula-title">Hesaplama Formülü:</span>
+                            <code>Kıdem Tazminatı = Çalışılan Yıl × 30 Günlük Brüt Ücret</code>
+                        </div>
+
+                        <h4>Kıdem Tazminatına Dahil Edilen Ödemeler:</h4>
+                        <ul class="check-list">
+                            <li>Brüt maaş</li>
+                            <li>Yol ve yemek yardımı</li>
+                            <li>Düzenli primler ve bonuslar</li>
+                            <li>Gıda ve yakacak yardımı</li>
+                            <li>Konut yardımı</li>
+                        </ul>
+
+                        <div class="info-notice">
+                            <strong>2026 Kıdem Tazminatı Tavanı:</strong> 47.804,40 ₺
+                            <br><small>(1 Ocak - 30 Haziran 2026 dönemi için)</small>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- İhbar Tazminatı -->
+                <article class="info-card">
+                    <div class="info-card-header">
+                        <span class="info-card-icon">📋</span>
+                        <h3 class="info-card-title">İhbar Tazminatı</h3>
+                    </div>
+                    <div class="info-card-content">
+                        <p>İhbar tazminatı, iş sözleşmesi feshedilirken <strong>ihbar süresine uyulmadığında</strong>
+                            ödenir.</p>
+
+                        <h4>İhbar Süreleri:</h4>
+                        <table class="info-table">
+                            <thead>
+                                <tr>
+                                    <th>Çalışma Süresi</th>
+                                    <th>İhbar Süresi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>0 - 6 ay</td>
+                                    <td>2 hafta</td>
+                                </tr>
+                                <tr>
+                                    <td>6 ay - 1.5 yıl</td>
+                                    <td>4 hafta</td>
+                                </tr>
+                                <tr>
+                                    <td>1.5 - 3 yıl</td>
+                                    <td>6 hafta</td>
+                                </tr>
+                                <tr>
+                                    <td>3 yıl ve üzeri</td>
+                                    <td>8 hafta</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="formula-box">
+                            <span class="formula-title">Hesaplama Formülü:</span>
+                            <code>İhbar Tazminatı = İhbar Süresi (Gün) × Günlük Brüt Ücret</code>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eligibility Section -->
+    <section class="eligibility-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Kimler Tazminat Alabilir?</h2>
+            </div>
+
+            <div class="eligibility-grid">
+                <div class="eligibility-card eligible">
+                    <div class="eligibility-icon">✅</div>
+                    <h3>Kıdem Tazminatı Alanlar</h3>
+                    <ul>
+                        <li>İşveren tarafından haksız yere işten çıkarılanlar</li>
+                        <li>Maaşı ödenmeyen, mobbing'e maruz kalan çalışanlar</li>
+                        <li>Emeklilik nedeniyle ayrılanlar</li>
+                        <li>Askerlik nedeniyle ayrılanlar</li>
+                        <li>Evlilik nedeniyle ayrılan kadın çalışanlar (1 yıl içinde)</li>
+                        <li>Sağlık sorunları nedeniyle ayrılanlar</li>
+                        <li>Vefat eden çalışanın mirasçıları</li>
+                    </ul>
+                </div>
+
+                <div class="eligibility-card not-eligible">
+                    <div class="eligibility-icon">❌</div>
+                    <h3>Kıdem Tazminatı Alamayanlar</h3>
+                    <ul>
+                        <li>Kendi isteğiyle (haklı neden olmadan) istifa edenler</li>
+                        <li>1 yıldan az çalışanlar</li>
+                        <li>Ahlak kurallarına aykırılık nedeniyle işten çıkarılanlar</li>
+                        <li>Hırsızlık, dolandırıcılık gibi suçlar işleyenler</li>
+                        <li>İş sözleşmesini ağır şekilde ihlal edenler</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ad Space 3 -->
+    <section class="ad-section">
+        <div class="container">
+            <div class="ad-placeholder" id="ad-bottom">
+                <span class="ad-text">Reklam Alanı</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="sss">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Sıkça Sorulan Sorular</h2>
+            </div>
+
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Kıdem tazminatı almak için minimum çalışma süresi nedir?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Kıdem tazminatı almak için <strong>en az 1 yıl (365 gün)</strong> aynı işverene bağlı olarak
+                            çalışmış olmanız gerekmektedir. 1 yıldan az çalışan işçiler kıdem tazminatı alamazlar, ancak
+                            ihbar tazminatı hakkına sahip olabilirler.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>İstifa edersem tazminat alabilir miyim?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Kendi isteğinizle istifa ederseniz normalde kıdem tazminatı alamazsınız. Ancak <strong>haklı
+                                nedenle istifa</strong> ederseniz (maaşınızın ödenmemesi, mobbing, çalışma koşullarının
+                            ağırlaştırılması gibi) kıdem tazminatı hakkınız doğar.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Kıdem tazminatı tavanı nedir?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Kıdem tazminatı tavanı, bir yıl için ödenebilecek maksimum tutardır. 2026 yılı ilk yarısı
+                            için bu tutar <strong>47.804,40 ₺</strong>'dir. Brüt maaşınız bu tutarın üzerinde olsa bile,
+                            kıdem tazminatınız tavan üzerinden hesaplanır.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>İhbar tazminatı ile kıdem tazminatı arasındaki fark nedir?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p><strong>Kıdem tazminatı</strong>, çalışılan her yıl için bir maaş tutarında ödenen ve belirli
+                            şartlara bağlı olan bir tazminattır. <strong>İhbar tazminatı</strong> ise iş sözleşmesi
+                            feshedilirken yasal ihbar süresine uyulmadığında ödenen tazminattır. İkisi birbirinden
+                            bağımsızdır ve ayrı ayrı hesaplanır.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Tazminatımı ne zaman almalıyım?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>İşveren, iş sözleşmesinin sona ermesiyle birlikte tazminatınızı <strong>derhal</strong>
+                            ödemekle yükümlüdür. Ödenmediği takdirde, tazminat alacağı için <strong>5 yıllık
+                                zamanaşımı</strong> süresi vardır. Bu süre içinde yasal yollara başvurabilirsiniz.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Kıdem tazminatından vergi kesintisi yapılır mı?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Kıdem tazminatı <strong>gelir vergisinden muaftır</strong>. Ancak damga vergisi (%0,759)
+                            kesilmektedir. İhbar tazminatından ise hem gelir vergisi hem de damga vergisi kesilir.
+                            Hesaplamamızda brüt tutarlar gösterilmektedir.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips Section -->
+    <section class="tips-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">💡 Önemli İpuçları</h2>
+            </div>
+
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <span class="tip-number">01</span>
+                    <h4>Belgelerinizi Saklayın</h4>
+                    <p>Maaş bordrolarınızı, iş sözleşmenizi ve tüm yazışmalarınızı mutlaka saklayın. Olası bir
+                        anlaşmazlıkta bunlar önemli deliller olacaktır.</p>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-number">02</span>
+                    <h4>İbraname İmzalamadan Önce</h4>
+                    <p>İşten ayrılırken size sunulan ibraname veya feragatnameleri imzalamadan önce dikkatlice okuyun.
+                        Haklarınızdan vazgeçmiş olabilirsiniz.</p>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-number">03</span>
+                    <h4>Zamanaşımına Dikkat</h4>
+                    <p>Kıdem ve ihbar tazminatı alacakları için 5 yıllık zamanaşımı süresi vardır. Bu süre içinde
+                        başvurmazsanız hakkınızı kaybedersiniz.</p>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-number">04</span>
+                    <h4>Avukata Danışın</h4>
+                    <p>Karmaşık durumlarda mutlaka bir iş hukuku avukatına danışın. İlk görüşmeler genellikle
+                        ücretsizdir.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <span class="logo-icon">💼</span>
+                        <span class="logo-text">Tazminat<span class="highlight">Hesapla</span></span>
+                    </a>
+                    <p>İş Kanunu'na uygun kıdem ve ihbar tazminatı hesaplama aracı. Haklarınızı öğrenin, bilinçli
+                        kararlar verin.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Hızlı Erişim</h4>
+                    <a href="#hesaplama">Tazminat Hesapla</a>
+                    <a href="#nasil-hesaplanir">Nasıl Hesaplanır?</a>
+                    <a href="#sss">Sıkça Sorulan Sorular</a>
+                </div>
+                <div class="footer-legal">
+                    <h4>Yasal</h4>
+                    <a href="/gizlilik">Gizlilik Politikası</a>
+                    <a href="/kullanim-sartlari">Kullanım Şartları</a>
+                    <a href="/cerez-politikasi">Çerez Politikası</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TazminatHesapla. Tüm hakları saklıdır.</p>
+                <p class="disclaimer-small">Bu site hukuki tavsiye vermez. Hesaplamalar bilgilendirme amaçlıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

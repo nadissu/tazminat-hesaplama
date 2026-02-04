@@ -1,5 +1,7 @@
 /* ===== CSS Reset & Variables ===== */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,49 +15,49 @@
     --secondary: #10b981;
     --secondary-light: #34d399;
     --accent: #f59e0b;
-    
+
     --bg-dark: #0f0f23;
     --bg-card: #1a1a2e;
     --bg-card-hover: #252542;
     --bg-input: #16213e;
-    
+
     --text-primary: #ffffff;
     --text-secondary: #a1a1aa;
     --text-muted: #71717a;
-    
+
     --border: #27273f;
     --border-hover: #3f3f5a;
-    
+
     --success: #22c55e;
     --warning: #f59e0b;
     --error: #ef4444;
     --info: #3b82f6;
-    
+
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
     --gradient-secondary: linear-gradient(135deg, #10b981 0%, #14b8a6 100%);
     --gradient-hero: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(139, 92, 246, 0.1) 50%, rgba(168, 85, 247, 0.05) 100%);
-    
+
     /* Shadows */
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
     --shadow-glow: 0 0 40px rgba(99, 102, 241, 0.3);
-    
+
     /* Typography */
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    
+
     /* Spacing */
     --container-width: 1200px;
     --section-padding: 80px;
-    
+
     /* Border Radius */
     --radius-sm: 8px;
     --radius-md: 12px;
     --radius-lg: 16px;
     --radius-xl: 24px;
-    
+
     /* Transitions */
     --transition-fast: 0.15s ease;
     --transition-normal: 0.3s ease;
@@ -173,8 +175,17 @@ body {
 }
 
 @keyframes pulse {
-    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
-    50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.8; }
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 0.8;
+    }
 }
 
 .hero-badge {
@@ -254,6 +265,7 @@ body {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -435,11 +447,11 @@ body {
     transition: border-color var(--transition-fast);
 }
 
-.radio-label input[type="radio"]:checked + .radio-custom {
+.radio-label input[type="radio"]:checked+.radio-custom {
     border-color: var(--primary);
 }
 
-.radio-label input[type="radio"]:checked + .radio-custom::after {
+.radio-label input[type="radio"]:checked+.radio-custom::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -921,8 +933,13 @@ body {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* ===== Tips Section ===== */
@@ -1042,12 +1059,12 @@ body {
     .calculator-wrapper {
         grid-template-columns: 1fr;
     }
-    
+
     .info-grid,
     .eligibility-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .tips-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1057,44 +1074,44 @@ body {
     :root {
         --section-padding: 60px;
     }
-    
+
     .nav-links {
         display: none;
     }
-    
+
     .hero {
         padding: 120px 0 60px;
     }
-    
+
     .hero-title {
         font-size: 32px;
     }
-    
+
     .hero-description {
         font-size: 16px;
     }
-    
+
     .form-group-row {
         grid-template-columns: 1fr;
     }
-    
+
     .radio-group {
         flex-direction: column;
     }
-    
+
     .calculator-card,
     .results-card {
         padding: 24px;
     }
-    
+
     .total-amount {
         font-size: 28px;
     }
-    
+
     .tips-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .footer-content {
         grid-template-columns: 1fr;
         gap: 32px;
@@ -1103,6 +1120,7 @@ body {
 
 /* ===== Print Styles ===== */
 @media print {
+
     .header,
     .ad-section,
     .cta-button,
@@ -1114,17 +1132,17 @@ body {
     .nav-links {
         display: none !important;
     }
-    
+
     body {
         background: white;
         color: black;
     }
-    
+
     .results-card {
         box-shadow: none;
         border: 2px solid #333;
     }
-    
+
     .total-section {
         background: #f5f5f5 !important;
         color: black !important;
@@ -1573,11 +1591,11 @@ body {
     .about-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .features-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .contact-grid {
         grid-template-columns: 1fr;
     }
@@ -1587,13 +1605,225 @@ body {
     .legal-content {
         padding: 24px;
     }
-    
+
     .features-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .contact-form-wrapper {
         padding: 24px;
     }
 }
 
+/* ===== Severance Cap Option Styles ===== */
+.cap-option-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 16px;
+    background: var(--bg-input);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    transition: border-color var(--transition-fast);
+}
+
+.cap-option-container:hover {
+    border-color: var(--border-hover);
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    flex: 1;
+}
+
+.checkbox-label input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox-custom {
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--border);
+    border-radius: 6px;
+    position: relative;
+    transition: all var(--transition-fast);
+    flex-shrink: 0;
+}
+
+.checkbox-label input[type="checkbox"]:checked+.checkbox-custom {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.checkbox-label input[type="checkbox"]:checked+.checkbox-custom::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.checkbox-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.info-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: 50%;
+    color: var(--primary-light);
+    font-size: 16px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    flex-shrink: 0;
+}
+
+.info-toggle:hover {
+    background: rgba(99, 102, 241, 0.2);
+    border-color: var(--primary);
+    transform: scale(1.05);
+}
+
+/* Cap Info Box */
+.cap-info-box {
+    display: none;
+    margin-top: 12px;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(139, 92, 246, 0.04) 100%);
+    border: 1px solid rgba(99, 102, 241, 0.25);
+    border-radius: var(--radius-md);
+    animation: slideDown 0.3s ease;
+}
+
+.cap-info-box.visible {
+    display: block;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cap-info-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.cap-info-icon {
+    font-size: 22px;
+}
+
+.cap-info-header strong {
+    font-size: 15px;
+    color: var(--primary-light);
+}
+
+.cap-info-content {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.cap-info-content p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.cap-current-value {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    background: rgba(99, 102, 241, 0.15);
+    border-radius: var(--radius-sm);
+}
+
+.cap-label {
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.cap-amount {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary-light);
+}
+
+.cap-example {
+    padding: 12px 14px;
+    background: rgba(245, 158, 11, 0.1);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.cap-example strong {
+    color: var(--accent);
+}
+
+.cap-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 14px;
+    background: rgba(16, 185, 129, 0.1);
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.cap-note .note-icon {
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.cap-note strong {
+    color: var(--secondary-light);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .cap-option-container {
+        flex-wrap: wrap;
+    }
+
+    .cap-current-value {
+        flex-direction: column;
+        gap: 6px;
+        text-align: center;
+    }
+}

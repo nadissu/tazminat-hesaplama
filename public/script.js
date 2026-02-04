@@ -70,6 +70,12 @@ function setupEventListeners() {
     document.getElementById('additionalIncome').addEventListener('input', (e) => {
         formatNumberInput(e.target);
     });
+
+    // Toggle cap info box
+    document.getElementById('capInfoToggle').addEventListener('click', () => {
+        const infoBox = document.getElementById('capInfoBox');
+        infoBox.classList.toggle('visible');
+    });
 }
 
 // Handle form submission
@@ -83,6 +89,7 @@ function handleSubmit(e) {
     const additionalIncome = parseFormattedNumber(document.getElementById('additionalIncome').value);
     const terminationReason = document.getElementById('terminationReason').value;
     const noticeGiven = document.querySelector('input[name="noticeGiven"]:checked').value === 'yes';
+    const applyCap = document.getElementById('applyCap').checked;
 
     // Validate
     if (!terminationReason) {
@@ -107,7 +114,8 @@ function handleSubmit(e) {
         grossSalary,
         additionalIncome,
         terminationReason,
-        noticeGiven
+        noticeGiven,
+        applyCap
     });
 
     // Display results
@@ -115,17 +123,18 @@ function handleSubmit(e) {
 }
 
 // Calculate severance and notice pay
-function calculateSeverance({ startDate, endDate, grossSalary, additionalIncome, terminationReason, noticeGiven }) {
+function calculateSeverance({ startDate, endDate, grossSalary, additionalIncome, terminationReason, noticeGiven, applyCap }) {
     // Calculate work duration
     const workDuration = calculateWorkDuration(startDate, endDate);
 
     // Total monthly income (gross salary + additional income)
     const totalMonthlyIncome = grossSalary + additionalIncome;
 
-    // Apply severance cap
-    const cappedMonthlyIncome = Math.min(totalMonthlyIncome, SEVERANCE_CAP);
+    // Apply severance cap only if applyCap is true
+    const cappedMonthlyIncome = applyCap ? Math.min(totalMonthlyIncome, SEVERANCE_CAP) : totalMonthlyIncome;
+    const isCapApplied = applyCap && totalMonthlyIncome > SEVERANCE_CAP;
 
-    // Daily wage
+    // Daily wage (for ihbar, use capped if cap is applied)
     const dailyWage = cappedMonthlyIncome / 30;
 
     // Severance pay calculation
@@ -139,8 +148,10 @@ function calculateSeverance({ startDate, endDate, grossSalary, additionalIncome,
             const yearsWorked = workDuration.totalDays / 365;
             severancePay = yearsWorked * cappedMonthlyIncome;
 
-            if (totalMonthlyIncome > SEVERANCE_CAP) {
-                severanceNote = `Tavan uygulandı. Gerçek maaşınız: ${formatCurrency(totalMonthlyIncome)}`;
+            if (isCapApplied) {
+                severanceNote = `⚖️ Yasal tavan uygulandı. Gerçek maaşınız: ${formatCurrency(totalMonthlyIncome)}`;
+            } else if (!applyCap && totalMonthlyIncome > SEVERANCE_CAP) {
+                severanceNote = `💡 Tavansız hesaplama. Yasal tavan: ${formatCurrency(SEVERANCE_CAP)}`;
             }
         } else {
             severanceNote = '1 yıldan az çalışma süresi - Kıdem tazminatı hakkı yoktur.';

@@ -151,6 +151,52 @@
                             <span class="form-hint">Düzenli olarak aldığınız ek gelirlerin aylık ortalaması</span>
                         </div>
 
+                        <!-- Severance Cap Option -->
+                        <div class="form-group">
+                            <div class="cap-option-container">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="applyCap" checked>
+                                    <span class="checkbox-custom"></span>
+                                    <span class="checkbox-text">
+                                        <span class="label-icon">📊</span>
+                                        Kıdem Tazminatı Tavanı Uygulansın
+                                    </span>
+                                </label>
+                                <button type="button" class="info-toggle" id="capInfoToggle" aria-label="Bilgi">
+                                    <span>ℹ️</span>
+                                </button>
+                            </div>
+
+                            <!-- Info Box -->
+                            <div class="cap-info-box" id="capInfoBox">
+                                <div class="cap-info-header">
+                                    <span class="cap-info-icon">⚖️</span>
+                                    <strong>Kıdem Tazminatı Tavanı Nedir?</strong>
+                                </div>
+                                <div class="cap-info-content">
+                                    <p>Türk İş Kanunu'na göre, kıdem tazminatı hesabında kullanılacak <strong>aylık brüt
+                                            ücret</strong> belirli bir tavan tutarı aşamaz.</p>
+
+                                    <div class="cap-current-value">
+                                        <span class="cap-label">2026 Yılı Tavanı (Ocak-Haziran):</span>
+                                        <span class="cap-amount">47.804,40 ₺</span>
+                                    </div>
+
+                                    <div class="cap-example">
+                                        <strong>Örnek:</strong> Aylık brüt maaşınız 100.000 ₺ olsa bile, kıdem
+                                        tazminatınız 47.804,40 ₺ üzerinden hesaplanır.
+                                    </div>
+
+                                    <div class="cap-note">
+                                        <span class="note-icon">💡</span>
+                                        <span><strong>Tavansız hesaplama:</strong> Bazı işverenler yasal zorunluluğun
+                                            üstünde tazminat ödeyebilir. Tavansız hesaplama yapmak için yukarıdaki
+                                            seçeneği kaldırın.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- Termination Reason -->
                         <div class="form-group">
                             <label class="form-label">

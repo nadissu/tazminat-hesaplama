@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3006;
 
 // Serve static files
 app.use(express.static(path.join(__dirname, 'public')));
@@ -34,7 +34,17 @@ app.get('/iletisim', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'iletisim.html'));
 });
 
+// SEO Routes
+app.get('/sitemap.xml', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'sitemap.xml'));
+});
+
+app.get('/robots.txt', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'robots.txt'));
+});
+
 // Start server
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
 });
+
